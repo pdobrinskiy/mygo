@@ -6,7 +6,7 @@ name: default
 steps:
   - name: build and check
     image: golang:1.18.3
-    commans:
+    commands:
       - echo "super" > superbolt
       - df -h
       - go vet .
