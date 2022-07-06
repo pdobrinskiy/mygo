@@ -9,5 +9,4 @@ steps:
     commands:
       - echo "super" > superbolt
       - df -h
-      - go vet .
       - go test -v ./...
