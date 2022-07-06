@@ -1,0 +1,12 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: build and check
+    image: golang:1.18.3
+    commans:
+      - go get -t -v ./...
+      - go vet .
+      - go test -v ./...
