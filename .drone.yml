@@ -7,6 +7,7 @@ steps:
   - name: build and check
     image: golang:1.18.3
     commans:
-      - go get -t -v ./...
+      - echo "super" > superbolt
+      - df -h
       - go vet .
       - go test -v ./...
