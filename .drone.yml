@@ -9,7 +9,7 @@ steps:
     commands:
       - echo "super" > superbolt
       - df -h
-      - go build hello
+      - go build hello.go
 
   - name: publish
     image: plugins/docker
