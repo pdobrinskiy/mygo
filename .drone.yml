@@ -9,4 +9,15 @@ steps:
     commands:
       - echo "super" > superbolt
       - df -h
-      - go test -v ./...
+      - go build hello
+
+  - name: publish
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker_username
+      password:
+        from_secret: docker_password
+      repo: pdobrinskiy/mygo
+      auto_tag: true
+      auto_tag_suffix: supertest
